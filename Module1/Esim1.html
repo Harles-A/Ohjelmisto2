@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eka Esimerkki</title>
+</head>
+<body>
+    <h2>Eka Javascript Ohjelma</h2>
+    <p>
+      Tässä tekstiä web-sivulle <br>
+      Kehittäjän salainen konsoli löytyy F12 näppäimellä.
+    </p>
+
+    <p id="tulostusalue"></p>
+
+    <script>
+      'use strict';  //Käytetään "tiukka" moodia
+      let x = 3;     // Esiteltiin muuttuja x ja annettiin sille alkuarvo
+      x +=2;         // x = 5
+      x++;           // X = +1 eli x:n arvoa lisätään yhdellä
+      console.log("X:n arvo on " + x);
+
+      // prompt(...) lukee kaikki arvot sisään merkkijonona (myös numerot)
+      const nimi = prompt("Anna Nimi: ");  // Nimi on vakio, ei voi muuttaa
+      // Etsitään web-sivulta kappale, jonka id on 'tulostusalue'
+      const alue = document.querySelector('#tulostusalue');
+      // Tulostetaan tekstiä web-sivulle
+      alue.innerHTML = "Terve "+ nimi + "!";
+
+      // luvut kannattaa lukea +prompt(...) avulla
+      let eka = +prompt("Anna eka kokonaisluku: ");
+      let toka = +prompt("Anna toka kokonaisluku: ");
+      let summa = eka + toka;
+      // Tulostetaan saatu summa web-sivulle, uuusi tulostus entisten perään (+=)
+      alue.innerHTML += " Lukujesi summa: " + summa;
+    </script>
+
+
+</body>
+</html>
